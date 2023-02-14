@@ -12,7 +12,7 @@ class PogodaSpider(scrapy.Spider):
               'turkestan-2', 'taldykorgan', 'kapchagay', 'kokshetau'
               ]
     start_urls = [f'https://pogoda1.ru/{j}/' + i.strftime('%d-%m-%Y') for j in cities for i in 
-                  [date(2018,2,1)+timedelta(days=x) for x in range((date(2022,11,30)-date(2018,2,1)).days)]
+                  [date(2018,2,1)+timedelta(days=x) for x in range((date(2023,2,13)-date(2018,2,1)).days)]
                   ]
 
     def parse(self, response):
